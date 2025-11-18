@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center w-100 h-100">
+    <div class="bg-dark text-light d-flex flex-column p-3 w-50 mt-5">
+        <h1>LOGIN</h1>
+        <p class="text-secondary">¡Introduzca su email y contraseña!</p>
+        <form #formLogin="ngForm" (submit)="iniciarSesion()">
+            <label>Email</label><br/>
+            <input class="form-control bg-dark text-light" type="text" #cajaemail name="cajaemail"/><br/>
+            <label>Contraseña</label><br/>
+            <input class="form-control bg-dark text-light" type="password" #cajapassword name="cajapassword"/><br/>
+            <button class="btn btn-outline-light">Login</button>
+        </form>
+    </div>
+  </div>

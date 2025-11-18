@@ -1,0 +1,14 @@
+<div class="p-5">
+    <label>Cubo</label><br />
+    <form #formCompra="ngForm" (submit)="realizarPedido()">
+        <select class="form-control" *ngIf="cubos" #selectCubo name="selectCubo">
+            @for(cubo of cubos; track cubo){
+                <option value="{{cubo.idCubo}}">
+                    {{ cubo.nombre }}
+                </option>
+            }
+        </select>
+        <br />
+        <button class="btn btn-primary">Comprar cubo</button>
+    </form>
+</div>

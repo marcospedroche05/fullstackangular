@@ -1,0 +1,19 @@
+<div>
+    <br />
+    <h1>
+        Cubos marca <span class="text-primary">{{ marca }}</span>
+    </h1>
+    <br />
+    <div *ngIf="cubosMarca" class="d-flex flex-wrap justify-content-around">
+         @for(cubo of cubosMarca; track cubo){
+            <div class="d-flex justify-content-center flex-column p-5 border border-4 border-secondary rounded rounded-5 m-2">
+            
+                <img src="{{cubo.imagen}}" width="150" height="150" />
+                <br />
+                <h5 class="text-primary">{{ cubo.nombre }}</h5>
+                <br />
+                <p class="text-primary">{{ cubo.precio }} €</p> 
+            </div>
+         }
+    </div>
+</div>
